@@ -10,7 +10,7 @@ const Footer = () => {
                     className="fw-light badge text-wrap text-muted"
                     style={{ fontFamily: "Source Code Pro" }}
                 >
-                    MARK H. HUANG © 2023. ALL RIGHTS RESERVED. LAST UPDATED: MAY 2023.
+                    MARK H. HUANG © 2024. ALL RIGHTS RESERVED. LAST UPDATED: JUL 2024.
                 </p>
             </div>
         </footer>

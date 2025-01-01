@@ -44,6 +44,7 @@ const SocialSection = () => {
                 link="https://www.instagram.com/markkkhh/"
             />
             <SocialButton name="X.com" link="https://x.com/markkkhh" />
+            <SocialButton name="Get my GPG Key" link="GPG.txt" />
             {/* <SocialButton
                 name="Documentations"
                 link="https://docs.markhh.com/"

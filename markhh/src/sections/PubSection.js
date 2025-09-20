@@ -11,6 +11,19 @@ const PubSection = () => {
             <SectionTitle title="Publications" />
 
             <Paper
+                paperTitle="OnlineSplatter: Pose-Free Online 3D Reconstruction for Free-Moving Objects"
+                authors="Mark He Huang, Lin Geng Foo, Christian Theobalt, Ying Sun, De Wen Soh"
+                nameBold="Mark He Huang"
+                venue="NeurIPS 2025 (Spotlight)"
+                paperText="paper"
+                paperLink="/"
+                codeText="code"
+                codeLink="/"
+                // arxivText="arXiv:2407.10494"
+                // arxivLink="https://arxiv.org/abs/2407.10494"
+                cite="/" />
+
+            <Paper
                 paperTitle="Learning to Unlearn for Robust Machine Unlearning"
                 authors="Mark He Huang, Lin Geng Foo, Jun Liu"
                 nameBold="Mark He Huang"

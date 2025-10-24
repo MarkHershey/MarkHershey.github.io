@@ -107,14 +107,14 @@ const Paper = (props) => {
                         >
                             <pre
                                 style={{
-                                    backgroundColor: '#282c34',
-                                    color: '#abb2bf',
+                                    backgroundColor: 'rgb(40, 44, 52)',
+                                    color: 'rgb(191, 191, 191)',
                                     padding: '1rem',
-                                    borderRadius: '0.375rem',
-                                    fontSize: '0.875rem',
+                                    borderRadius: '0.5rem',
+                                    fontSize: '0.85rem',
                                     fontFamily: 'Monaco, Menlo, "Ubuntu Mono", monospace',
-                                    overflow: 'auto',
-                                    whiteSpace: 'pre-wrap',
+                                    overflow: 'hidden',
+                                    // whiteSpace: 'pre-wrap',
                                     wordWrap: 'break-word',
                                     border: '1px solid #3e4451',
                                     margin: 0

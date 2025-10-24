@@ -22,10 +22,10 @@ const PubSection = () => {
                 arxivText="arXiv:2510.20605"
                 arxivLink="https://arxiv.org/abs/2510.20605"
                 cite={`@inproceedings{huang2025onlinesplatter,
-title = {OnlineSplatter: Pose-Free Online 3D Reconstruction for Free-Moving Objects},
-author = {Huang, Mark He and Foo, Lin Geng and Theobalt, Christian and Sun, Ying and Soh, De Wen},
-booktitle = {Advances in Neural Information Processing Systems},
-year = {2025}
+  title = {OnlineSplatter: Pose-Free Online 3D Reconstruction for Free-Moving Objects},
+  author = {Huang, Mark He and Foo, Lin Geng and Theobalt, Christian and Sun, Ying and Soh, De Wen},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year = {2025}
 }`} />
 
             <Paper
@@ -59,7 +59,7 @@ year = {2025}
                 arxivText="arXiv:2304.04415"
                 arxivLink="https://arxiv.org/abs/2304.04415"
                 cite={`@inproceedings{xu2023meta,
-  title={Meta compositional referring expression segmentation},
+  title={Meta Compositional Referring Expression Segmentation},
   author={Xu, Li and Huang, Mark He and Shang, Xindi and Yuan, Zehuan and Sun, Ying and Liu, Jun},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   pages={19478--19487},
@@ -79,7 +79,7 @@ year = {2025}
                 arxivText="arXiv:2103.15538"
                 arxivLink="https://arxiv.org/abs/2103.15538"
                 cite={`@inproceedings{xu2021sutd,
-  title={Sutd-trafficqa: A question answering benchmark and an efficient network for video reasoning over traffic events},
+  title={SUTD-TrafficQA: A Question Answering Benchmark and an Efficient Network for Video Reasoning over Traffic Events},
   author={Xu, Li and Huang, He and Liu, Jun},
   booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
   pages={9878--9888},

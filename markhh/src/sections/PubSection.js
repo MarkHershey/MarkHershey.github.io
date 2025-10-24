@@ -16,12 +16,17 @@ const PubSection = () => {
                 nameBold="Mark He Huang"
                 venue="NeurIPS 2025 (Spotlight)"
                 paperText="paper"
-                paperLink="/"
-                codeText="code"
-                codeLink="/"
-                // arxivText="arXiv:2407.10494"
-                // arxivLink="https://arxiv.org/abs/2407.10494"
-                cite="/" />
+                paperLink="https://markhh.com/OnlineSplatter/"
+                // codeText="code"
+                // codeLink="/"
+                arxivText="arXiv:2510.20605"
+                arxivLink="https://arxiv.org/abs/2510.20605"
+                cite={`@inproceedings{huang2025onlinesplatter,
+title = {OnlineSplatter: Pose-Free Online 3D Reconstruction for Free-Moving Objects},
+author = {Huang, Mark He and Foo, Lin Geng and Theobalt, Christian and Sun, Ying and Soh, De Wen},
+booktitle = {Advances in Neural Information Processing Systems},
+year = {2025}
+}`} />
 
             <Paper
                 paperTitle="Learning to Unlearn for Robust Machine Unlearning"

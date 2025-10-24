@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { CodeBlock, monokai } from "react-code-blocks";
 
 const Paper = (props) => {
     const copyToClipboard = (text) => {
@@ -106,14 +105,23 @@ const Paper = (props) => {
                             className="mt-3 font-monospace"
                             style={{ maxWidth: "100%" }}
                         >
-                            <CodeBlock
-                                text={props.cite}
-                                language={"latex"}
-                                showLineNumbers={false}
-                                theme={monokai}
-                                wrapLines={true}
-                                codeBlock
-                            />
+                            <pre
+                                style={{
+                                    backgroundColor: '#282c34',
+                                    color: '#abb2bf',
+                                    padding: '1rem',
+                                    borderRadius: '0.375rem',
+                                    fontSize: '0.875rem',
+                                    fontFamily: 'Monaco, Menlo, "Ubuntu Mono", monospace',
+                                    overflow: 'auto',
+                                    whiteSpace: 'pre-wrap',
+                                    wordWrap: 'break-word',
+                                    border: '1px solid #3e4451',
+                                    margin: 0
+                                }}
+                            >
+                                {props.cite}
+                            </pre>
                         </div>
                     ) : null}
                 </div>

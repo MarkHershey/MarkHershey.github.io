@@ -23,8 +23,7 @@ const BioSection = () => {
                 <div className="mt-2 col-8" id="BioText">
                     <p className="card-text">
                         Hi there, I'm <b>Mark He Huang</b>, based in Singapore, currently a Computer Science PhD
-                        student working on Computer Vision, Machine Learning
-                        and Reasoning at{" "}
+                        student working on 3D/4D Computer Vision, Multi-Modal Reasoning at{" "}
                         <a
                             href="https://www.sutd.edu.sg"
                             className="text-info"

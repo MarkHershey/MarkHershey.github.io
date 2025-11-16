@@ -15,10 +15,10 @@ const PubSection = () => {
                 authors="Mark He Huang, Lin Geng Foo, Christian Theobalt, Ying Sun, De Wen Soh"
                 nameBold="Mark He Huang"
                 venue="NeurIPS 2025 (Spotlight)"
-                paperText="paper"
+                paperText="project"
                 paperLink="https://markhh.com/OnlineSplatter/"
-                // codeText="code"
-                // codeLink="/"
+                codeText="code"
+                codeLink=""
                 arxivText="arXiv:2510.20605"
                 arxivLink="https://arxiv.org/abs/2510.20605"
                 cite={`@inproceedings{huang2025onlinesplatter,

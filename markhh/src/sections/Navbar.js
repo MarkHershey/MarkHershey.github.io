@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import HomePage from "../pages/HomePage";
 
-const Navbar = () => {
-    const handleNavOnClick = () => { };
+const ROUTE_PATHS = ["/projects", "/gallery", "/"];
 
+const Navbar = () => {
     return (
         <Router>
             <nav
@@ -17,7 +17,6 @@ const Navbar = () => {
                     <Link
                         className="navbar-brand"
                         name="About"
-                        onClick={handleNavOnClick}
                         to={"/"}
                     >
                         <img
@@ -54,9 +53,9 @@ const Navbar = () => {
             </nav>
 
             <Switch>
-                <Route path={"/projects"} component={HomePage} />
-                <Route path={"/gallery"} component={HomePage} />
-                <Route path={"/"} component={HomePage} />
+                {ROUTE_PATHS.map((routePath) => (
+                    <Route key={routePath} path={routePath} component={HomePage} />
+                ))}
             </Switch>
         </Router>
     );

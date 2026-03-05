@@ -1,6 +1,8 @@
 import React from "react";
 
 const Footer = () => {
+
+    const currentYear = new Date().getFullYear();
     return (
         <footer className="mt-5 footer user-select-none">
             <div className="container d-flex flex-row justify-content-center d-none">
@@ -14,7 +16,7 @@ const Footer = () => {
                     className="fw-light badge text-wrap text-muted"
                     style={{ fontFamily: "Source Code Pro" }}
                 >
-                    MARK H. HUANG © 2025. ALL RIGHTS RESERVED. LAST UPDATED: OCT 2025.
+                    MARK H. HUANG © {currentYear}. ALL RIGHTS RESERVED. LAST UPDATED: MAR 2026.
                 </p>
             </div>
         </footer>

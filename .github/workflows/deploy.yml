@@ -41,12 +41,12 @@ jobs:
               working-directory: markhh
               run: CI=false pnpm run build
 
-            # Deploy the prebuilt /build to gh-pages (same approach you have now)
+            # Deploy the prebuilt /dist to gh-pages
             - name: Deploy to gh-pages
               working-directory: markhh
               run: |
                   git config user.name github-actions
                   git config user.email github-actions@github.com
-                  git --work-tree build add --all
+                  git --work-tree dist add --all
                   git commit -m "Auto deployment" || echo "No changes to commit"
                   git push origin HEAD:gh-pages --force

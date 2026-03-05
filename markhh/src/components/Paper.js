@@ -1,22 +1,33 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const Paper = (props) => {
+const ACTION_CLASS_NAME =
+    "me-2 mt-2 py-0 btn btn-outline-dark btn-sm font-monospace";
+
+const Paper = ({
+    paperTitle,
+    authors,
+    nameBold,
+    venue,
+    paperText,
+    paperLink,
+    codeText,
+    codeLink,
+    arxivText,
+    arxivLink,
+    cite,
+}) => {
     const copyToClipboard = (text) => {
-        navigator.clipboard.writeText(text);
+        if (navigator?.clipboard?.writeText) {
+            navigator.clipboard.writeText(text);
+        }
     };
 
     const [citation, setCitation] = useState(false);
 
     const toggleCitation = () => {
-        copyToClipboard(props.cite);
-
-        if (citation) {
-            setCitation(false);
-        } else {
-            setCitation(true);
-        }
+        copyToClipboard(cite);
+        setCitation((currentValue) => !currentValue);
     };
 
     const getHighlightedText = (text, highlight) => {
@@ -50,50 +61,46 @@ const Paper = (props) => {
             <div className="">
                 <div className="d-flex flex-column align-items-start text-start">
                     <div className="my-1">
-                        <span className="fw-normal text-start">
-                            {props.paperTitle}
-                        </span>
-                        <span className="mx-2 badge bg-info text-dark">
-                            {props.venue}
-                        </span>
+                        <span className="fw-normal text-start">{paperTitle}</span>
+                        <span className="mx-2 badge bg-info text-dark">{venue}</span>
                     </div>
                     <div className="my-1 fst-italic fw-light">
-                        {getHighlightedText(props.authors, props.nameBold)}
+                        {getHighlightedText(authors, nameBold)}
                     </div>
                     <div className="my-1 d-flex align-content-start flex-wrap">
-                        {props.paperLink ? (
+                        {paperLink ? (
                             <a
-                                href={props.paperLink}
-                                className="me-2 mt-2 py-0 btn btn-outline-dark btn-sm font-monospace"
+                                href={paperLink}
+                                className={ACTION_CLASS_NAME}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {props.paperText}
+                                {paperText}
                             </a>
                         ) : null}
-                        {props.codeLink ? (
+                        {codeLink ? (
                             <a
-                                href={props.codeLink}
-                                className="me-2 mt-2 py-0 btn btn-outline-dark btn-sm font-monospace"
+                                href={codeLink}
+                                className={ACTION_CLASS_NAME}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {props.codeText}
+                                {codeText}
                             </a>
                         ) : null}
-                        {props.arxivLink ? (
+                        {arxivLink ? (
                             <a
-                                href={props.arxivLink}
-                                className="me-2 mt-2 py-0 btn btn-outline-dark btn-sm font-monospace"
+                                href={arxivLink}
+                                className={ACTION_CLASS_NAME}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {props.arxivText}
+                                {arxivText}
                             </a>
                         ) : null}
-                        {props.cite ? (
+                        {cite ? (
                             <div
-                                className="me-2 mt-2 py-0 btn btn-outline-dark btn-sm font-monospace"
+                                className={ACTION_CLASS_NAME}
                                 onClick={toggleCitation}
                             >
                                 bibtex
@@ -120,7 +127,7 @@ const Paper = (props) => {
                                     margin: 0
                                 }}
                             >
-                                {props.cite}
+                                {cite}
                             </pre>
                         </div>
                     ) : null}

@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../components/SectionTitle";
 import SocialButton from "../components/SocialButton";
+import SOCIAL_LINKS from "../data/socialLinks";
 
 const SocialSection = () => {
     return (
@@ -10,41 +11,13 @@ const SocialSection = () => {
         >
             <SectionTitle title="Connect with me" />
             {/* <SocialButton name="Email" link="mailto:me@markhh.com" /> */}
-            <SocialButton
-                name="Google Scholar"
-                link="https://scholar.google.com/citations?user=lv1uAiMAAAAJ"
-            />
-            <SocialButton
-                name="ORCID"
-                link="https://orcid.org/0000-0002-9217-4977"
-            />
-            <SocialButton
-                name="OpenReview"
-                link="https://openreview.net/profile?id=~Mark_He_Huang1"
-            />
-            <SocialButton
-                name="arXiv.org"
-                link="https://arxiv.org/a/huang_h_7.html"
-            />
-            <SocialButton
-                name="ResearchGate"
-                link="https://www.researchgate.net/profile/He-Huang-106"
-            />
-            <SocialButton
-                name="DBLP"
-                link="https://dblp.org/pid/344/4694.html"
-            />
-            <SocialButton
-                name="LinkedIn"
-                link="https://www.linkedin.com/in/markhehuang/"
-            />
-            <SocialButton name="GitHub" link="https://github.com/MarkHershey" />
-            <SocialButton
-                name="Instagram"
-                link="https://www.instagram.com/markkkhh/"
-            />
-            <SocialButton name="X.com" link="https://x.com/markkkhh" />
-            <SocialButton name="Get my GPG Key" link="GPG.txt" />
+            {SOCIAL_LINKS.map((socialLink) => (
+                <SocialButton
+                    key={socialLink.name}
+                    name={socialLink.name}
+                    link={socialLink.link}
+                />
+            ))}
             {/* <SocialButton
                 name="Documentations"
                 link="https://docs.markhh.com/"

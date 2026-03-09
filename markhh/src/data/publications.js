@@ -5,7 +5,7 @@ const PUBLICATIONS = [
         authors: "Lin Geng Foo, Mark He Huang, Alexandros Lattas, Stylianos Moschoglou, Thabo Beeler, Christian Theobalt",
         nameBold: "Mark He Huang",
         venue: "CVPR 2026",
-        paperText: "project page",
+        paperText: "project",
         paperLink: "https://vcai.mpi-inf.mpg.de/projects/PSIVG/",
         codeText: "code",
         codeLink: "https://github.com/MarkHershey/PSIVG",

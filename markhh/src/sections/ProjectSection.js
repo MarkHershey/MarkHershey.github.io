@@ -4,8 +4,7 @@ import SectionTitle from "../components/SectionTitle";
 const ProjectSection = () => {
     return (
         <div
-            className="mt-5 p-4 container bg-white shadow-sm"
-            style={{ maxWidth: 720, borderRadius: 10 }}
+            className="mx-auto mt-12 w-full max-w-[720px] rounded-xl border border-[#e2e5ee] bg-white p-5 shadow-sm sm:p-6"
         >
             <SectionTitle title="Projects" />
         </div>

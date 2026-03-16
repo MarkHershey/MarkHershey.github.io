@@ -1,22 +1,15 @@
 import React from "react";
 
 const Footer = () => {
-
     const currentYear = new Date().getFullYear();
-    return (
-        <footer className="mt-5 footer user-select-none">
-            <div className="container d-flex flex-row justify-content-center d-none">
-                <a href="https://clustrmaps.com/site/1c19b"><img src="//clustrmaps.com/map_v2.png?cl=080808&w=300&t=n&d=mimMKRAAli-zSS2UDdRbmlLd_oFy2cp_BCUeqsLi8sg&co=ffffff&ct=808080" alt="none" /></a>
-            </div>
 
-            <div style={{ height: 70 }}></div>
-            <hr className="mt-auto mx-5"></hr>
-            <div className="container d-flex flex-row justify-content-center">
-                <p
-                    className="fw-light badge text-wrap text-muted"
-                    style={{ fontFamily: "Source Code Pro" }}
-                >
-                    MARK H. HUANG © {currentYear}. ALL RIGHTS RESERVED. LAST UPDATED: MAR 2026.
+    return (
+        <footer className="mt-12 pb-8 pt-2 select-none">
+            <div className="w-full px-6 sm:px-12">
+                <hr className="border-t border-[#1D1E2C]/15" />
+                <p className="mt-3 text-center text-[0.64rem] uppercase tracking-[0.14em] text-[#6b7280] [font-family:'Source_Code_Pro',monospace] sm:text-[0.7rem]">
+                    MARK H. HUANG © {currentYear}. ALL RIGHTS RESERVED. LAST
+                    UPDATED: MAR 2026.
                 </p>
             </div>
         </footer>

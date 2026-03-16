@@ -17,7 +17,9 @@
     "test": "echo \"No tests configured\""
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.2.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.2.1",
     "vite": "^5.4.11"
   }
 }

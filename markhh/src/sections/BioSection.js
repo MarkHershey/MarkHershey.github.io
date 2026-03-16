@@ -4,41 +4,32 @@ import ProfileImg from "../pics/markhh.jpg";
 const BioSection = () => {
     return (
         <div
-            className="mt-5 p-3 container jumbotron bg-white shadow-sm user-select-none"
-            style={{ maxWidth: 720, borderRadius: 10 }}
+            className="mx-auto mt-12 w-full max-w-[720px] rounded-xl border border-[#e2e5ee] bg-white p-5 shadow-sm select-none sm:p-6"
         >
-            <div className="my-2 row text-center align-center align-items-center justify-content-center">
+            <div className="my-1 flex flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:gap-5 sm:text-left">
                 <img
                     src={ProfileImg}
-                    className="my-3 col-4"
+                    className="h-36 w-36 shrink-0 rounded-xl object-cover sm:h-44 sm:w-44 md:h-[200px] md:w-[200px]"
                     alt="ProfileImg"
-                    style={{
-                        maxWidth: 200,
-                        maxHeight: 200,
-                        width: "100%",
-                        borderRadius: 10,
-                    }}
                 />
 
-                <div className="mt-2 col-8" id="BioText">
-                    <p className="card-text">
+                <div className="w-full flex-1" id="BioText">
+                    <p className="mb-0">
                         Hi there, I'm <b>Mark He Huang</b>, based in Singapore, currently a Computer Science PhD
                         student working on 3D/4D Computer Vision, Multi-Modal Reasoning at{" "}
                         <a
                             href="https://www.sutd.edu.sg"
-                            className="text-info"
+                            className="text-[#0dcaf0] no-underline hover:text-[#31d2f2]"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ textDecoration: "none" }}
                         >
                             SUTD
                         </a> &{" "}
                         <a
                             href="https://www.a-star.edu.sg/cfar"
-                            className="text-info"
+                            className="text-[#0dcaf0] no-underline hover:text-[#31d2f2]"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ textDecoration: "none" }}
                         >
                             A*STAR
                         </a>.

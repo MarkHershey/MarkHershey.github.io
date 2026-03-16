@@ -1,6 +1,6 @@
 const PUBLICATIONS = [
     {
-        id: "foo2026",
+        id: "foo2026physical",
         paperTitle: "Physical Simulator In-the-Loop Video Generation",
         authors: "Lin Geng Foo, Mark He Huang, Alexandros Lattas, Stylianos Moschoglou, Thabo Beeler, Christian Theobalt",
         nameBold: "Mark He Huang",
@@ -11,14 +11,11 @@ const PUBLICATIONS = [
         codeLink: "https://github.com/MarkHershey/PSIVG",
         arxivText: "arXiv:2603.06408",
         arxivLink: "https://arxiv.org/abs/2603.06408",
-        cite: `@misc{foo2026physicalsimulatorintheloopvideo,
-    title={Physical Simulator In-the-Loop Video Generation}, 
-    author={Lin Geng Foo and Mark He Huang and Alexandros Lattas and Stylianos Moschoglou and Thabo Beeler and Christian Theobalt},
-    year={2026},
-    eprint={2603.06408},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/2603.06408}, 
+        cite: `@article{foo2026physical, 
+  title={Physical Simulator In-the-Loop Video Generation}, 
+  author={Foo, Lin Geng and Huang, Mark He and Lattas, Alexandros and Moschoglou, Stylianos and Beeler, Thabo and Theobalt, Christian}, 
+  journal={arXiv preprint arXiv:2603.06408}, 
+  year={2026} 
 }`,
     },
     {
@@ -33,11 +30,11 @@ const PUBLICATIONS = [
         codeLink: "",
         arxivText: "arXiv:2510.20605",
         arxivLink: "https://arxiv.org/abs/2510.20605",
-        cite: `@inproceedings{huang2025onlinesplatter,
-  title = {OnlineSplatter: Pose-Free Online 3D Reconstruction for Free-Moving Objects},
-  author = {Huang, Mark He and Foo, Lin Geng and Theobalt, Christian and Sun, Ying and Soh, De Wen},
-  booktitle = {Advances in Neural Information Processing Systems},
-  year = {2025}
+        cite: `@article{huang2025onlinesplatter,
+  title={OnlineSplatter: Pose-Free Online 3D Reconstruction for Free-Moving Objects},
+  author={Huang, Mark He and Foo, Lin Geng and Theobalt, Christian and Sun, Ying and Soh, De Wen},
+  journal={arXiv preprint arXiv:2510.20605},
+  year={2025}
 }`,
     },
     {

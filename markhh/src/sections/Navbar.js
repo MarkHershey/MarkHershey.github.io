@@ -19,36 +19,15 @@ const Navbar = () => {
                         name="About"
                         to={"/"}
                     >
-                        <img
+                        {/* <img
                             className="d-inline-block align-text-top rounded me-2"
                             src="https://avatars0.githubusercontent.com/u/25876605?s=460&v=4"
                             alt=""
                             width="30"
                             height="30"
-                        />
-                        @markhh
+                        /> */}
+                        Mark He Huang
                     </Link>
-
-                    {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div className="collapse navbar-collapse mw-auto" id="navbarNav">
-                        <ul className="navbar-nav mw-auto">
-                            <li className="nav-item">
-                                <Link className={"nav-link"} name="About" onClick={handleNavOnClick} to={"/"}>About</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className={"nav-link"} name="Projects" onClick={handleNavOnClick} to={"/projects"}>Projects</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className={"nav-link"} name="Gallery" onClick={handleNavOnClick} to={"/gallery"}>Gallery</Link>
-                            </li>
-                            <li className="nav-item">
-                                <a className={"nav-link"} name="Docs" onClick={handleNavOnClick} href="/">Docs</a>
-                            </li>
-                        </ul>
-                    </div> */}
                 </div>
             </nav>
 

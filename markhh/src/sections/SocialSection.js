@@ -6,7 +6,7 @@ import SOCIAL_LINKS from "../data/socialLinks";
 const SocialSection = () => {
     return (
         <div
-            className="mx-auto mt-12 w-full max-w-[720px] rounded-xl border border-[#e2e5ee] bg-white p-5 shadow-sm select-none sm:p-6"
+            className="mx-auto mt-12 w-full max-w-[720px] rounded-xl border border-[#d8e0e8]/55 bg-white p-5 shadow-none select-none sm:p-6"
         >
             <SectionTitle title="Connect with me" />
             {/* <SocialButton name="Email" link="mailto:me@markhh.com" /> */}

@@ -6,8 +6,8 @@ const Footer = () => {
     return (
         <footer className="mt-12 pb-8 pt-2 select-none">
             <div className="w-full px-6 sm:px-12">
-                <hr className="border-t border-[#1D1E2C]/15" />
-                <p className="mt-3 text-center text-[0.64rem] uppercase tracking-[0.14em] text-[#6b7280] [font-family:'Source_Code_Pro',monospace] sm:text-[0.7rem]">
+                <hr className="border-t border-[#d8e0e8]" />
+                <p className="mt-3 text-center text-[0.64rem] uppercase tracking-[0.14em] text-[#526070] [font-family:'Source_Code_Pro',monospace] sm:text-[0.7rem]">
                     MARK H. HUANG © {currentYear}. ALL RIGHTS RESERVED. LAST
                     UPDATED: MAR 2026.
                 </p>

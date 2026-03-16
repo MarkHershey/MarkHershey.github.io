@@ -4,7 +4,7 @@ import ProfileImg from "../pics/markhh.jpg";
 const BioSection = () => {
     return (
         <div
-            className="mx-auto mt-12 w-full max-w-[720px] rounded-xl border border-[#e2e5ee] bg-white p-5 shadow-sm select-none sm:p-6"
+            className="mx-auto mt-12 w-full max-w-[720px] rounded-xl border border-[#d8e0e8]/55 bg-white p-5 shadow-none select-none sm:p-6"
         >
             <div className="my-1 flex flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:gap-5 sm:text-left">
                 <img
@@ -16,22 +16,22 @@ const BioSection = () => {
                 <div className="w-full flex-1" id="BioText">
                     <p className="mb-0">
                         Hi there, I'm <b>Mark He Huang</b>, based in Singapore, currently a Computer Science PhD
-                        student working on 3D/4D Computer Vision, Multi-Modal Reasoning at{" "}
+                        student working on 3D/4D Vision, Learning, Graphics at{" "}
                         <a
                             href="https://www.sutd.edu.sg"
-                            className="text-[#0dcaf0] no-underline hover:text-[#31d2f2]"
+                            className="text-[#2b5b84] underline decoration-[#9eb3c8] underline-offset-2 hover:text-[#214867]"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            SUTD
+                            Singapore University of Technology and Design
                         </a> &{" "}
                         <a
                             href="https://www.a-star.edu.sg/cfar"
-                            className="text-[#0dcaf0] no-underline hover:text-[#31d2f2]"
+                            className="text-[#2b5b84] underline decoration-[#9eb3c8] underline-offset-2 hover:text-[#214867]"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            A*STAR
+                            A*STAR Center for Frontier AI Research
                         </a>.
                     </p>
                 </div>

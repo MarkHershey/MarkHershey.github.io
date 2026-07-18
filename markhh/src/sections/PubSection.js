@@ -2,7 +2,7 @@ import React from "react";
 import SectionTitle from "../components/SectionTitle";
 import Paper from "../components/Paper";
 import PUBLICATIONS from "../data/publications";
-import { GOOGLE_SCHOLAR_URL } from "../data/socialLinks";
+import { GOOGLE_SCHOLAR_URL } from "../data/socialLinks.mjs";
 
 const PubSection = () => {
     return (

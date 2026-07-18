@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileImg from "../pics/markhh.jpg";
-import SOCIAL_LINKS from "../data/socialLinks";
+import PROFILE from "../data/profile.mjs";
+import SOCIAL_LINKS from "../data/socialLinks.mjs";
 
 const BioSection = () => {
     return (
@@ -11,32 +12,32 @@ const BioSection = () => {
                 <img
                     src={ProfileImg}
                     className="h-36 w-36 shrink-0 rounded-xl object-cover sm:h-44 sm:w-44 md:h-[200px] md:w-[200px]"
-                    alt="Portrait of Mark He Huang"
+                    alt={`Portrait of ${PROFILE.name}`}
                 />
 
                 <div className="w-full flex-1" id="BioText">
                     <p className="mb-0">
-                        Hi there, I'm <b>Mark He Huang</b>, currently based in Singapore. I work on 3D/4D perception,
-                        learning, and reasoning in physical spaces. I'm a PhD student in Computer Science at{" "}
+                        Hi there, I'm <b>{PROFILE.name}</b>, currently based in {PROFILE.location}. I work on{" "}
+                        {PROFILE.researchFocus}. I'm a PhD student in {PROFILE.degreeField} at{" "}
                         <a
-                            href="https://www.sutd.edu.sg"
+                            href={PROFILE.institution.url}
                             className="text-[#2b5b84] underline decoration-[#9eb3c8] underline-offset-2 hover:text-[#214867]"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Singapore University of Technology and Design
+                            {PROFILE.institution.name}
                         </a> {" "}
                         and my PhD research is generously supported by{" "}
                         <a
-                            href="https://www.a-star.edu.sg"
+                            href={PROFILE.fundingAgency.url}
                             className="text-[#2b5b84] underline decoration-[#9eb3c8] underline-offset-2 hover:text-[#214867]"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            A*STAR
+                            {PROFILE.fundingAgency.name}
                         </a>
                         {" "}
-                        Computing and Information Science (ACIS/AGS Computing) Scholarship.
+                        {PROFILE.scholarship}.
                     </p>
                     <div className="mt-6 text-sm leading-6 not-italic text-[#526070]">
                         {SOCIAL_LINKS.map((socialLink, index) => (

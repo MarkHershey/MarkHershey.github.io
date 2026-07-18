@@ -9,8 +9,12 @@
     "react-dom": "^18.3.1"
   },
   "scripts": {
+    "predev": "node scripts/generate-agent-content.mjs",
     "dev": "vite",
+    "prestart": "node scripts/generate-agent-content.mjs",
     "start": "vite",
+    "generate:agent-content": "node scripts/generate-agent-content.mjs",
+    "prebuild": "node scripts/generate-agent-content.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"No tests configured\""

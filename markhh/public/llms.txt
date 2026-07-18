@@ -1,0 +1,23 @@
+# Mark He Huang
+
+> Personal academic website of Mark He Huang, a Computer Science PhD student based in Singapore who works on 3D/4D perception, learning, and reasoning in physical spaces.
+
+This site contains a short biography, publication metadata, individually linked authors, project and paper resources, BibTeX citations, and scholarly profiles.
+
+## Core content
+
+- [Full Markdown profile](https://markhh.com/profile.md): Complete biography, publications, resources, citations, and profile links in one text-only document.
+- [Human-facing website](https://markhh.com/): Canonical visual version of the website.
+
+## Research profiles
+
+- [Google Scholar](https://scholar.google.com/citations?user=lv1uAiMAAAAJ): Mark He Huang's Google Scholar profile.
+- [ORCID](https://orcid.org/0000-0002-9217-4977): Mark He Huang's ORCID profile.
+- [OpenReview](https://openreview.net/profile?id=~Mark_He_Huang1): Mark He Huang's OpenReview profile.
+- [arXiv](https://arxiv.org/a/huang_h_7.html): Mark He Huang's arXiv profile.
+- [DBLP](https://dblp.org/pid/344/4694.html): Mark He Huang's DBLP profile.
+- [GitHub](https://github.com/MarkHershey): Mark He Huang's GitHub profile.
+
+## Optional
+
+- [GPG public key](https://markhh.com/GPG.txt): Public key for verifying signed communication.

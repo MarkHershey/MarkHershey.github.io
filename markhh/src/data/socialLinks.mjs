@@ -43,7 +43,7 @@ const SOCIAL_LINKS = [
     },
     {
         name: "GPG Public Key",
-        link: "GPG.txt",
+        link: "/GPG.txt",
     },
 ];
 

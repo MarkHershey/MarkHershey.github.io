@@ -47,7 +47,7 @@ const Paper = ({ publication }) => {
                             rel: "noopener noreferrer",
                         } : {})}
                         aria-label={primaryLink ? `Open ${title}` : undefined}
-                        className="group flex aspect-[3/2] min-w-0 items-center justify-center overflow-hidden rounded-lg border border-[#d8e0e8] bg-white"
+                        className="group flex aspect-[3/2] min-w-0 items-center justify-center overflow-hidden bg-white"
                     >
                         <img
                             src={thumbnail.src}

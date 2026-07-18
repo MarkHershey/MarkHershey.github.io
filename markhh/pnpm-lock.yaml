@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/baloo-chettan-2':
+        specifier: 5.2.7
+        version: 5.2.7
+      '@fontsource-variable/roboto':
+        specifier: 5.2.10
+        version: 5.2.10
+      '@fontsource/source-code-pro':
+        specifier: 5.2.7
+        version: 5.2.7
       prop-types:
         specifier: ^15.8.1
         version: 15.8.1
@@ -271,6 +280,15 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/baloo-chettan-2@5.2.7':
+    resolution: {integrity: sha512-j4NWw/l3Md9Vxing4iTJ2w9fWsJo7qp/B/MOFtIhd9u+bqwcebwHtwNYHRiJGnWCRU69TcdkMmbRUQSb4XX6xg==}
+
+  '@fontsource-variable/roboto@5.2.10':
+    resolution: {integrity: sha512-LJ0iLg6aHbLzN515gyHzmdTqJzd9NlI95cCg1DW0F5G7KkFqRLBBKBbqEJx4nSu4aby3IKmw3ZH6Fe928IfaSQ==}
+
+  '@fontsource/source-code-pro@5.2.7':
+    resolution: {integrity: sha512-7papq9TH94KT+S5VSY8cU7tFmwuGkIe3qxXRMscuAXH6AjMU+KJI75f28FzgBVDrlMfA0jjlTV4/x5+H5o/5EQ==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -1035,6 +1053,12 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.12':
     optional: true
+
+  '@fontsource-variable/baloo-chettan-2@5.2.7': {}
+
+  '@fontsource-variable/roboto@5.2.10': {}
+
+  '@fontsource/source-code-pro@5.2.7': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:

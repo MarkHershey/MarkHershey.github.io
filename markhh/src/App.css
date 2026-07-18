@@ -4,7 +4,7 @@
 
 #BioText {
   text-align: left;
-  font-family: 'Baloo Chettan 2', cursive;
+  font-family: 'Baloo Chettan 2', 'Baloo Chettan 2 Fallback', cursive;
   font-style: oblique;
   font-size: 1.2rem;
   line-height: 1.5;

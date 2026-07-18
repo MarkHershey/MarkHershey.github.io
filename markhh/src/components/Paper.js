@@ -8,21 +8,29 @@ const AUTHOR_LINK_CLASS_NAME =
     "text-inherit no-underline transition-colors hover:text-[#0f4775] hover:underline hover:decoration-2 hover:underline-offset-2 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2b5b84]/20";
 
 const Paper = ({ publication }) => {
-    const { thumbnail, title, authors, venue, links, citation } = publication;
+    const { id, thumbnail, title, authors, venue, links, citation } = publication;
     const primaryLink = Object.values(links).find(Boolean);
     const ThumbnailWrapper = primaryLink ? "a" : "div";
-
-    const copyToClipboard = (text) => {
-        if (navigator?.clipboard?.writeText) {
-            navigator.clipboard.writeText(text);
-        }
-    };
-
     const [isCitationVisible, setIsCitationVisible] = useState(false);
+    const [copyStatus, setCopyStatus] = useState("copy bibtex");
+    const citationId = `citation-${id}`;
 
     const toggleCitation = () => {
-        copyToClipboard(citation);
         setIsCitationVisible((currentValue) => !currentValue);
+        setCopyStatus("copy bibtex");
+    };
+
+    const copyCitation = async () => {
+        try {
+            if (!navigator.clipboard?.writeText) {
+                throw new Error("Clipboard API unavailable");
+            }
+
+            await navigator.clipboard.writeText(citation);
+            setCopyStatus("copied");
+        } catch {
+            setCopyStatus("copy unavailable");
+        }
     };
 
     return (
@@ -93,13 +101,30 @@ const Paper = ({ publication }) => {
                                 type="button"
                                 className={`${ACTION_CLASS_NAME} cursor-pointer`}
                                 onClick={toggleCitation}
+                                aria-expanded={isCitationVisible}
+                                aria-controls={citationId}
                             >
-                                bibtex
+                                {isCitationVisible ? "hide bibtex" : "bibtex"}
                             </button>
                         ) : null}
                     </div>
                     {isCitationVisible ? (
-                        <div className="mt-4 w-full min-w-0 [font-family:'Source_Code_Pro',monospace]">
+                        <div
+                            id={citationId}
+                            className="mt-4 w-full min-w-0 [font-family:'Source_Code_Pro',monospace]"
+                            role="region"
+                            aria-label={`${title} BibTeX citation`}
+                        >
+                            <div className="mb-2 flex justify-end">
+                                <button
+                                    type="button"
+                                    className={`${ACTION_CLASS_NAME} cursor-pointer`}
+                                    onClick={copyCitation}
+                                    aria-live="polite"
+                                >
+                                    {copyStatus}
+                                </button>
+                            </div>
                             <pre
                                 className="whitespace-pre-wrap break-words"
                                 style={{
@@ -127,6 +152,7 @@ const Paper = ({ publication }) => {
 
 Paper.propTypes = {
     publication: PropTypes.shape({
+        id: PropTypes.string.isRequired,
         thumbnail: PropTypes.shape({
             src: PropTypes.string.isRequired,
             alt: PropTypes.string.isRequired,

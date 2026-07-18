@@ -11,13 +11,13 @@ const BioSection = () => {
                 <img
                     src={ProfileImg}
                     className="h-36 w-36 shrink-0 rounded-xl object-cover sm:h-44 sm:w-44 md:h-[200px] md:w-[200px]"
-                    alt="ProfileImg"
+                    alt="Portrait of Mark He Huang"
                 />
 
                 <div className="w-full flex-1" id="BioText">
                     <p className="mb-0">
-                        Hi there, I'm <b>Mark He Huang</b>, currently based in Singapore, I work on 3D/4D Perception, Learning, Reasoning in Physical Spaces.
-                        I'm a Computer Science PhD student at{" "}
+                        Hi there, I'm <b>Mark He Huang</b>, currently based in Singapore. I work on 3D/4D perception,
+                        learning, and reasoning in physical spaces. I'm a PhD student in Computer Science at{" "}
                         <a
                             href="https://www.sutd.edu.sg"
                             className="text-[#2b5b84] underline decoration-[#9eb3c8] underline-offset-2 hover:text-[#214867]"

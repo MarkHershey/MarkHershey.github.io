@@ -9,7 +9,7 @@ const Footer = () => {
                 <hr className="border-t border-[#d8e0e8]" />
                 <p className="mt-3 text-center text-[0.64rem] uppercase tracking-[0.14em] text-[#526070] [font-family:'Source_Code_Pro',monospace] sm:text-[0.7rem]">
                     MARK H. HUANG © {currentYear}. ALL RIGHTS RESERVED. LAST
-                    UPDATED: MAR 2026.
+                    UPDATED: JUL 2026.
                 </p>
             </div>
         </footer>

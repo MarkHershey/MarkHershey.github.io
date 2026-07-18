@@ -5,7 +5,7 @@ const ACTION_CLASS_NAME =
     "inline-flex h-8 items-center rounded-md border border-[#9eacbc] px-2.5 text-[0.84rem] leading-none text-[#45586c] no-underline [font-family:'Source_Code_Pro',monospace] transition-colors duration-150 hover:border-[#7f91a5] hover:bg-[#edf2f7] hover:text-[#1f2a37] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2b5b84]/20";
 
 const AUTHOR_LINK_CLASS_NAME =
-    "text-inherit no-underline transition-colors hover:text-[#214867] focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2b5b84]/20";
+    "text-inherit no-underline transition-colors hover:text-[#0f4775] hover:underline hover:decoration-2 hover:underline-offset-2 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2b5b84]/20";
 
 const Paper = ({ publication }) => {
     const { thumbnail, title, authors, venue, links, citation } = publication;

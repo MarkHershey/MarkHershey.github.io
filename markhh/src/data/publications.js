@@ -20,7 +20,7 @@ const AUTHORS = {
     },
     stylianosMoschoglou: {
         name: "Stylianos Moschoglou",
-        url: "https://moschoglou.com/",
+        url: "https://scholar.google.com/citations?user=bMuT5mkAAAAJ&hl=en",
     },
     thaboBeeler: {
         name: "Thabo Beeler",
@@ -32,7 +32,7 @@ const AUTHORS = {
     },
     yingSun: {
         name: "Ying Sun",
-        url: "https://research.a-star.edu.sg/researcher/ying-sun/",
+        url: "https://scholar.google.com.sg/citations?user=AJReaQ8AAAAJ&hl=en",
     },
     deWenSoh: {
         name: "De Wen Soh",
@@ -40,11 +40,11 @@ const AUTHORS = {
     },
     junLiu: {
         name: "Jun Liu",
-        url: "https://wp.lancs.ac.uk/vl/",
+        url: "https://scholar.google.com/citations?user=Q5Ild8UAAAAJ",
     },
     liXu: {
         name: "Li Xu",
-        url: "https://www.sutd.edu.sg/istd/events-listing/istd-phd-oral-defense-presented-by-li-xu-towards-effective-robust-and-continual-multi-modal-learning/",
+        url: "https://scholar.google.com/citations?user=eZWXOqYAAAAJ",
     },
     xindiShang: {
         name: "Xindi Shang",

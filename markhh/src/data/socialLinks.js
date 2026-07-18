@@ -14,7 +14,7 @@ const SOCIAL_LINKS = [
         link: "https://openreview.net/profile?id=~Mark_He_Huang1",
     },
     {
-        name: "arXiv.org",
+        name: "arXiv",
         link: "https://arxiv.org/a/huang_h_7.html",
     },
     {
@@ -42,7 +42,7 @@ const SOCIAL_LINKS = [
         link: "https://x.com/markkkhh",
     },
     {
-        name: "Get my GPG Key",
+        name: "GPG Public Key",
         link: "GPG.txt",
     },
 ];

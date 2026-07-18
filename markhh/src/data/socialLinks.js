@@ -1,7 +1,9 @@
+export const GOOGLE_SCHOLAR_URL = "https://scholar.google.com/citations?user=lv1uAiMAAAAJ";
+
 const SOCIAL_LINKS = [
     {
         name: "Google Scholar",
-        link: "https://scholar.google.com/citations?user=lv1uAiMAAAAJ",
+        link: GOOGLE_SCHOLAR_URL,
     },
     {
         name: "ORCID",

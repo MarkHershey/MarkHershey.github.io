@@ -4,101 +4,91 @@ import PropTypes from "prop-types";
 const ACTION_CLASS_NAME =
     "inline-flex h-8 items-center rounded-md border border-[#9eacbc] px-2.5 text-[0.84rem] leading-none text-[#45586c] no-underline [font-family:'Source_Code_Pro',monospace] transition-colors duration-150 hover:border-[#7f91a5] hover:bg-[#edf2f7] hover:text-[#1f2a37] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2b5b84]/20";
 
-const Paper = ({
-    paperTitle,
-    authors,
-    nameBold,
-    venue,
-    paperText,
-    paperLink,
-    codeText,
-    codeLink,
-    arxivText,
-    arxivLink,
-    cite,
-}) => {
+const AUTHOR_LINK_CLASS_NAME =
+    "text-inherit no-underline transition-colors hover:text-[#214867] focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2b5b84]/20";
+
+const Paper = ({ publication }) => {
+    const { thumbnail, title, authors, venue, links, citation } = publication;
+    const primaryLink = Object.values(links).find(Boolean);
+    const ThumbnailWrapper = primaryLink ? "a" : "div";
+
     const copyToClipboard = (text) => {
         if (navigator?.clipboard?.writeText) {
             navigator.clipboard.writeText(text);
         }
     };
 
-    const [citation, setCitation] = useState(false);
+    const [isCitationVisible, setIsCitationVisible] = useState(false);
 
     const toggleCitation = () => {
-        copyToClipboard(cite);
-        setCitation((currentValue) => !currentValue);
-    };
-
-    const getHighlightedText = (text, highlight) => {
-        // Ref: https://stackoverflow.com/a/43235785
-        // Split on highlight term and include term into parts, ignore case
-        const parts = text.split(new RegExp(`(${highlight})`, "gi"));
-        return (
-            <span>
-                {" "}
-                {parts.map((part, i) => (
-                    <span
-                        key={i}
-                        style={
-                            part.toLowerCase() === highlight.toLowerCase()
-                                ? { fontWeight: "bold" }
-                                : {}
-                        }
-                    >
-                        {part}
-                    </span>
-                ))}{" "}
-            </span>
-        );
+        copyToClipboard(citation);
+        setIsCitationVisible((currentValue) => !currentValue);
     };
 
     return (
-        <div
+        <article
             className="my-3 rounded-xl border border-[#d8e0e8]/55 bg-[#f9fbfd] p-4 shadow-none transition-colors duration-200"
             style={{ maxWidth: "100%" }}
         >
-            <div>
-                <div className="flex flex-col items-start text-left">
+            <div className="grid gap-4 sm:grid-cols-[minmax(0,3fr)_minmax(0,7fr)] sm:gap-5">
+                {thumbnail?.src ? (
+                    <ThumbnailWrapper
+                        {...(primaryLink ? {
+                            href: primaryLink,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                        } : {})}
+                        aria-label={primaryLink ? `Open ${title}` : undefined}
+                        className="group flex aspect-[3/2] min-w-0 items-center justify-center overflow-hidden rounded-lg border border-[#d8e0e8] bg-white"
+                    >
+                        <img
+                            src={thumbnail.src}
+                            alt={thumbnail.alt}
+                            className="h-full w-full object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+                            loading="lazy"
+                        />
+                    </ThumbnailWrapper>
+                ) : null}
+
+                <div className="flex min-w-0 flex-col items-start text-left">
                     <div className="my-1 grid w-full grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 gap-y-2">
-                        <span className="min-w-0 text-left text-[1.03rem] font-normal text-[#1f2a37]">{paperTitle}</span>
+                        <span className="min-w-0 text-left text-[1.03rem] font-normal text-[#1f2a37]">{title}</span>
                         <span className="inline-flex justify-self-end whitespace-nowrap rounded-md bg-[#dce8f3] px-[0.65em] py-[0.35em] text-right text-[0.72rem] font-bold tracking-wide text-[#2b4f73]">{venue}</span>
                     </div>
                     <div className="my-1 text-[1.03rem] italic font-light text-[#526070]">
-                        {getHighlightedText(authors, nameBold)}
+                        {authors.map((author, index) => (
+                            <React.Fragment key={`${author.name}-${index}`}>
+                                {index > 0 ? ", " : null}
+                                {author.url ? (
+                                    <a
+                                        href={author.url}
+                                        className={`${AUTHOR_LINK_CLASS_NAME} ${author.highlighted ? "font-bold" : ""}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {author.name}
+                                    </a>
+                                ) : (
+                                    <span className={author.highlighted ? "font-bold" : ""}>
+                                        {author.name}
+                                    </span>
+                                )}
+                            </React.Fragment>
+                        ))}
                     </div>
                     <div className="my-1 flex flex-wrap content-start gap-2">
-                        {paperLink ? (
+                        {Object.entries(links).map(([label, url]) => url ? (
                             <a
-                                href={paperLink}
+                                key={label}
+                                href={url}
                                 className={ACTION_CLASS_NAME}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {paperText}
+                                {label}
                             </a>
-                        ) : null}
-                        {codeLink ? (
-                            <a
-                                href={codeLink}
-                                className={ACTION_CLASS_NAME}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {codeText}
-                            </a>
-                        ) : null}
-                        {arxivLink ? (
-                            <a
-                                href={arxivLink}
-                                className={ACTION_CLASS_NAME}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {arxivText}
-                            </a>
-                        ) : null}
-                        {cite ? (
+                        ) : null)}
+                        {citation ? (
                             <button
                                 type="button"
                                 className={`${ACTION_CLASS_NAME} cursor-pointer`}
@@ -108,12 +98,10 @@ const Paper = ({
                             </button>
                         ) : null}
                     </div>
-                    {citation ? (
-                        <div
-                            className="mt-4 w-full [font-family:'Source_Code_Pro',monospace]"
-                            style={{ maxWidth: "100%" }}
-                        >
+                    {isCitationVisible ? (
+                        <div className="mt-4 w-full min-w-0 [font-family:'Source_Code_Pro',monospace]">
                             <pre
+                                className="whitespace-pre-wrap break-words"
                                 style={{
                                     backgroundColor: '#26303d',
                                     color: '#d4dbe3',
@@ -122,48 +110,37 @@ const Paper = ({
                                     fontSize: '0.85rem',
                                     fontFamily: 'Monaco, Menlo, "Ubuntu Mono", monospace',
                                     overflow: 'hidden',
-                                    // whiteSpace: 'pre-wrap',
                                     wordWrap: 'break-word',
                                     border: '1px solid #3f4a59',
                                     margin: 0
                                 }}
                             >
-                                {cite}
+                                {citation}
                             </pre>
                         </div>
                     ) : null}
                 </div>
             </div>
-        </div>
+        </article>
     );
 };
 
-Paper.defaultProps = {
-    paperTitle: "Paper Title",
-    authors: "Author A, Author B, and Other",
-    nameBold: "Author A",
-    venue: "Conference Name",
-    paperText: "paper",
-    paperLink: "",
-    codeText: "code",
-    codeLink: "",
-    arxivText: "arXiv:xxxx.xxxxx",
-    arxivLink: "",
-    cite: "Paper Citation",
-};
-
 Paper.propTypes = {
-    paperTitle: PropTypes.string,
-    authors: PropTypes.string,
-    nameBold: PropTypes.string,
-    venue: PropTypes.string,
-    paperText: PropTypes.string,
-    paperLink: PropTypes.string,
-    codeText: PropTypes.string,
-    codeLink: PropTypes.string,
-    arxivText: PropTypes.string,
-    arxivLink: PropTypes.string,
-    cite: PropTypes.string,
+    publication: PropTypes.shape({
+        thumbnail: PropTypes.shape({
+            src: PropTypes.string.isRequired,
+            alt: PropTypes.string.isRequired,
+        }).isRequired,
+        title: PropTypes.string.isRequired,
+        authors: PropTypes.arrayOf(PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            url: PropTypes.string,
+            highlighted: PropTypes.bool,
+        })).isRequired,
+        venue: PropTypes.string.isRequired,
+        links: PropTypes.objectOf(PropTypes.string).isRequired,
+        citation: PropTypes.string,
+    }).isRequired,
 };
 
 export default Paper;

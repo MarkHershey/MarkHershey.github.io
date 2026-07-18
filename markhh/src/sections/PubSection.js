@@ -2,38 +2,29 @@ import React from "react";
 import SectionTitle from "../components/SectionTitle";
 import Paper from "../components/Paper";
 import PUBLICATIONS from "../data/publications";
+import { GOOGLE_SCHOLAR_URL } from "../data/socialLinks";
 
 const PubSection = () => {
     return (
         <div
-            className="mx-auto mt-12 w-full max-w-[720px] rounded-xl border border-[#d8e0e8]/55 bg-white p-5 shadow-none sm:p-6"
+            className="mx-auto mt-12 w-full max-w-[900px] rounded-xl border border-[#d8e0e8]/55 bg-white p-5 shadow-none sm:p-6"
         >
             <SectionTitle title="Publications" />
 
             {PUBLICATIONS.map((publication) => (
-                <Paper key={publication.id} {...publication} />
+                <Paper key={publication.id} publication={publication} />
             ))}
 
-            {/* <Paper
-                paperTitle="The Multi-Modal Video Reasoning and Analyzing Competition"
-                authors="H Peng, He Huang, L Xu, TJ Li, et al."
-                nameBold="He Huang"
-                venue="ICCVW 2021"
-                paperText="paper"
-                paperLink="https://openaccess.thecvf.com/content/ICCV2021W/MMVRA/html/Peng_The_Multi-Modal_Video_Reasoning_and_Analyzing_Competition_ICCVW_2021_paper.html"
-                codeText="website"
-                codeLink="https://sutdcv.github.io/multi-modal-video-reasoning"
-                arxivText="arXiv:2108.08344"
-                arxivLink="https://arxiv.org/abs/2108.08344"
-                cite={`@InProceedings{Peng_2021_ICCV,
-    author    = {Peng, Haoran and Huang, He and Xu, Li and Li, Tianjiao and Liu, Jun and Rahmani, Hossein and Ke, Qiuhong and Guo, Zhicheng and Wu, Cong and Li, Rongchang and Ye, Mang and Wang, Jiahao and Zhang, Jiaxu and Liu, Yuanzhong and He, Tao and Zhang, Fuwei and Liu, Xianbin and Lin, Tao},
-    title     = {The Multi-Modal Video Reasoning and Analyzing Competition},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
-    month     = {October},
-    year      = {2021},
-    pages     = {806-813}
-}`}
-            /> */}
+            <div className="mt-5 flex justify-end">
+                <a
+                    href={GOOGLE_SCHOLAR_URL}
+                    className="text-[0.95rem] font-medium text-[#2b5b84] no-underline transition-colors hover:text-[#214867] hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2b5b84]/20"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Full Publication List →
+                </a>
+            </div>
         </div>
     );
 };

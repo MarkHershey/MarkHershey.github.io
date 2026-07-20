@@ -7,7 +7,7 @@ import { GOOGLE_SCHOLAR_URL } from "../data/socialLinks.mjs";
 const PubSection = () => {
     return (
         <div
-            className="mx-auto mt-12 w-full max-w-[900px] rounded-xl border border-[#d8e0e8]/55 bg-white p-5 shadow-none sm:p-6"
+            className="mx-auto mt-12 w-full max-w-[900px] p-5 sm:p-6"
         >
             <SectionTitle title="Publications" />
 

@@ -35,7 +35,7 @@ const Paper = ({ publication }) => {
 
     return (
         <article
-            className="my-3 rounded-xl border border-[#d8e0e8]/55 bg-[#f9fbfd] p-4 shadow-none transition-colors duration-200"
+            className="my-3 rounded-xl border border-[#d8e0e8]/55 bg-white p-4 shadow-none transition-colors duration-200"
             style={{ maxWidth: "100%" }}
         >
             <div className="grid gap-4 sm:grid-cols-[minmax(0,3fr)_minmax(0,7fr)] sm:gap-5">

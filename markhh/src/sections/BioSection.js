@@ -6,7 +6,7 @@ import SOCIAL_LINKS from "../data/socialLinks.mjs";
 const BioSection = () => {
     return (
         <div
-            className="mx-auto mt-12 w-full max-w-[720px] rounded-xl border border-[#d8e0e8]/55 bg-white p-5 shadow-none select-none sm:p-6"
+            className="mx-auto mt-12 w-full max-w-[720px] p-5 select-none sm:p-6"
         >
             <div className="my-1 flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:gap-5 sm:text-left">
                 <img
